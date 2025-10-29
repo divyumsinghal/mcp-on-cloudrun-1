@@ -281,6 +281,18 @@ def get_animal_details(name: str) -> Dict[str, Any]:
             return animal
     return {}
 
+@mcp.prompt()
+def find(animal: str) -> str:
+    """
+    Find which exhibit and trail a specific animal might be located.
+    """
+
+    return (
+        f"Please find the exhibit and trail information for {animal} in the zoo. "
+        f"Respond with '[animal] can be found in the [exhibit] on the [trail].'"
+        f"Example: Penguins can be found in The Arctic Exhibit on the Polar Path."
+    )
+    
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
     logger.info(f"🚀 MCP server started on port {port}")
