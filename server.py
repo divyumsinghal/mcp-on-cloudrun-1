@@ -242,6 +242,13 @@ ZOO_ANIMALS = [
         "age": 9,
         "enclosure": "The Walrus Cove",
         "trail": "Polar Path"
+    },    
+    {
+        "species": "zebra",
+        "name": "Tom",
+        "age": 2,
+        "enclosure": "The Zebra park",
+        "trail": "Grassy Park"
     }
 ]
 
@@ -292,7 +299,7 @@ def find(animal: str) -> str:
         f"Respond with '[animal] can be found in the [exhibit] on the [trail].'"
         f"Example: Penguins can be found in The Arctic Exhibit on the Polar Path."
     )
-    
+
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
     logger.info(f"🚀 MCP server started on port {port}")
